@@ -1,0 +1,21 @@
+{% extends ("base.html.twig") %}
+{% block body %}
+    {% block insideBody %} {% endblock %}
+    <h1>All users:</h1><br>
+    {% for user in users %}
+        {# dump(user) #}
+        {% include 'firstBundle:first:userShow.html.twig' with user %}
+    {% endfor %}
+{%  endblock %}
+
+{% block footer %}
+    To jest Footer
+    {{ parent() }}
+    strony all users
+{% endblock %}
+
+{# with {'name':user['name'], 'surname':user['surname']} - 2 wersja, ale nie konieczna,
+ gdyż my przekazujemy w user dokładnie te same nazwy jakie oczekuje od nas userShow, jednak, jesli by tak nie było, należy
+ wpisać tym sposobem
+ kolejnośc bloków nie ma znaczenia, jednak dobrze jest to implementować logicznie
+ #}

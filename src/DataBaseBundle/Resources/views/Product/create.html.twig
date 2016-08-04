@@ -1,0 +1,19 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DataBaseBundle:Product:create{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Product:create page</h1>
+    <form method="POST">
+        Nazwa:
+        <input type="text" name="productName" > <br>
+        Opis:
+        <input type="text" name="productDesc" > <br>
+        Cena:
+        <input type="number" name="productPrice" step="0.01" > <br>
+        Ilość:
+        <input type="number" name="productQuantity" > <br>
+        <input type="submit">
+    </form>
+
+{% endblock %}

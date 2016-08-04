@@ -1,0 +1,10 @@
+{%  extends ("base.html.twig") %}
+{% block body %}
+{% for word in text|split(" ") %}
+    {% if word|lower in badWords %}
+        ****
+    {% else %}
+        {{ word }}
+    {% endif %}
+{% endfor %}
+{% endblock %}

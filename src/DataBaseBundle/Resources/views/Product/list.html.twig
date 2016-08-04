@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DataBaseBundle:Product:list{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Product:list page</h1>
+    <p>List of products:</p>
+    <ul>
+        {% for product in allProducts %}
+            <li>
+                <a href="{{ url("database_product_show", {"id" : product.id}) }}">{{ product.name }}
+                </a>
+            </li>
+        {% else %}
+            <li>Brak produktów</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

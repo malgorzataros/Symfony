@@ -1,0 +1,4 @@
+{% for i in range(0, 100) %}
+    <p style="background-color:{{ cycle(["brown", "blue", "beige"], i) }} ">
+    Test {{ i }} </p>
+{% endfor %}

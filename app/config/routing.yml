@@ -1,0 +1,10 @@
+data_base:
+    resource: "@DataBaseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+first:
+    resource: "@firstBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

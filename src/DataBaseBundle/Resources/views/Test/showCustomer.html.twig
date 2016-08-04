@@ -1,0 +1,8 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{ dump(customer) }}
+    {% for order in customer.shopOrder %}
+        {{ dump(order) }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {% for invoice in invoices %}
+        Numer : {{ invoice.invoiceNumber }}, Is payed : {{ invoice.isPayed }} <br>
+    {% else %}
+        No invoice <br>
+    {% endfor %}
+    {% if prevpage is defined %}
+        <a href="{{ url("database_test_paginateinvoices", {"page" : prevpage})}}"> Prev page</a> <br>
+    {% endif %}
+    {% if nextpage is defined %}
+        <a href="{{ url("database_test_paginateinvoices", {"page" : nextpage})}}"> Next page</a> <br>
+    {% endif %}
+{% endblock %}

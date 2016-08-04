@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DataBaseBundle:Form:customerForm{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Form:customerForm page</h1>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

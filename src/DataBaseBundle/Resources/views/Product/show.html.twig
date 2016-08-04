@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DataBaseBundle:Product:show{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Product:show page</h1>
+{# {{ dump(product) }} #}
+    {% if product is null %}
+        <h4>Nie ma takiego produktu</h4>
+    {% else %}
+        <p>Products from DB:</p>
+        {% include "DataBaseBundle:Product:product.html.twig" with {"product":product} %}
+    {% endif %}
+
+{% endblock %}
